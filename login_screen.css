@@ -6,6 +6,8 @@ body {
     justify-content: center; /* Center horizontally */
     align-items: flex-start; /* Align at the top vertically */
     height: 100vh; /* Full viewport height */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
 }
 
 .login_box{
@@ -14,10 +16,17 @@ body {
     position: absolute;
     left: 50px;
     top:50px;
-    color: aliceblue;
+    color:cornsilk;
 }
 
 .email{
     /*position: absolute;*/
     left: 15px;
+}
+
+h1{
+    color: cornsilk;
+    position: absolute;
+    margin-top: 15%;
+    font-size: 55 ;
 }
