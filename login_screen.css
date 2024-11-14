@@ -1,0 +1,9 @@
+body {
+    background-image: url("Images/pexels-felixmittermeier-956999.jpg");
+    background-size: cover;
+    margin: 0; /* Remove default margin */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align at the top vertically */
+    height: 100vh; /* Full viewport height */
+}
