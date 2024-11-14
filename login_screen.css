@@ -7,3 +7,17 @@ body {
     align-items: flex-start; /* Align at the top vertically */
     height: 100vh; /* Full viewport height */
 }
+
+.login_box{
+    background-color: black;
+    align-items: left;
+    position: absolute;
+    left: 50px;
+    top:50px;
+    color: aliceblue;
+}
+
+.email{
+    /*position: absolute;*/
+    left: 15px;
+}
