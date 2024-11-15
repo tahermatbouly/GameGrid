@@ -28,5 +28,21 @@ h1{
     color: cornsilk;
     position: absolute;
     margin-top: 15%;
-    font-size: 55 ;
+    font-size: 100px;
+    right: 350px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transitions */
+    animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+}
+
+h1:hover {
+    color: cornsilk; /* Change the color to SteelBlue on hover */
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+p{
+    color: cornsilk;
+    position: absolute;
+    margin-top: 23%;
+    font-size: 50px;
+    right: 300px;
 }
