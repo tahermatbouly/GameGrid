@@ -130,3 +130,8 @@ p{
   /* text-decoration: underline dashed r; */
 
 }
+
+a{
+  text-decoration: none;
+  color: white;
+}
