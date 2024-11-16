@@ -1,0 +1,48 @@
+body {
+    background-image: url("Images/pexels-felixmittermeier-956999.jpg");
+    background-size: cover;
+    margin: 0; /* Remove default margin */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align at the top vertically */
+    height: 100vh; /* Full viewport height */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+.login_box{
+    background-color: black;
+    align-items: left;
+    position: absolute;
+    left: 50px;
+    top:50px;
+    color:cornsilk;
+}
+
+.email{
+    /*position: absolute;*/
+    left: 15px;
+}
+
+h1{
+    color: cornsilk;
+    position: absolute;
+    margin-top: 15%;
+    font-size: 100px;
+    right: 350px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transitions */
+    animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+}
+
+h1:hover {
+    color: cornsilk; /* Change the color to SteelBlue on hover */
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+p{
+    color: cornsilk;
+    position: absolute;
+    margin-top: 23%;
+    font-size: 50px;
+    right: 300px;
+}
