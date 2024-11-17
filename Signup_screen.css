@@ -31,20 +31,30 @@ body {
     
 }
 
-.Signup_box{
+.Signup_box {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
     background-color: rgba(0, 0, 0, 0.6);
     color: cornsilk;
     text-align: center;
-    align-items: center;
     padding: 7%;
-    margin: 30px; /* Space from the top and left */
-    box-sizing: border-box; /* Include padding in the width */
+    margin: 30px;
+    box-sizing: border-box;
     box-shadow: 0px 0px 10px 4px rgb(0, 0, 0);
     font-family: "Monaco", monospace;
     position: absolute;
     margin-top: 140px;
     margin-left: 20px;
     left: 80px;
+}
+
+.Signup_box form {
+    display: flex;
+    flex-direction: column; /* Stack form items vertically */
+    gap: 15px; /* Add space between form items */
+    width: 100%; /* Make form take full width of the container */
 }
 
 button{
@@ -70,20 +80,17 @@ button{
     box-shadow: 0px 0px 25px 2px rgb(119, 0, 203);
 }
 
-.email{
-    
-    margin-left: 30px; /* Margin instead of position for alignment */
-}
+
 
 h1{
     color: white;
     margin-top: 15%;
     font-size: 40px;
-    right: 200px;
+    right: 100px;
     transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transitions */
     animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
-    position: absolute;
-
+    position:fixed;
+    display: flex;
     font-size: 80pt;
     font-weight: bold;
     /* font-family: "Monaco", monospace; */
@@ -102,9 +109,9 @@ p{
     margin-top: 80%;
     font-size: 50px;
     top:410px;
-    right:1px;
-    position: absolute;
-
+    right:0px;
+    position: fixed;
+    margin-left: 50px;
     color: rgb(0, 0, 0);
     font-size: 15pt;
     /* font-family: monospace; */
@@ -128,3 +135,10 @@ a{
 }
 
 
+
+.Signup_box input,
+.Signup_box button {
+    width: 80%; /* Set a consistent width for inputs and buttons */
+    padding: 10px; /* Add padding for better appearance */
+    margin: 0 auto; /* Center inputs and buttons */
+}
