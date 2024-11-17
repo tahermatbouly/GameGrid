@@ -8,28 +8,41 @@
 </head>
 <body>
 
-    <h1 class="description">The GameGrid</h1>
-    <p class="description">Your ultimate gaming destination</p>
+  <div id="root">
+    <h1 class="description"><a href="index.html">The Game<span id="grid">Grid</a></span></h1>
+    <p class="description"> Where your next epic journey begins. 🎮✨</p>
     <div class="login_box">
+        <div id="greetings">
+            <strong id="greetings">Sign in</strong>
+        </div>
+        <br>
        <form>
+            
         <div>
-            <label class="email">Email</label>
+            <label class="email" for="email">Email</label>
+            
             <input type="email" placeholder="example@mail.com">
         </div>
+        <br>
         <div>
-            <label class="password">Password</label>
+            <label class="password" for="password">Password</label>
+            
             <input type="password" placeholder="password">
 
         </div>
-
-        <button class="sign-in">
-            <a>sign-in</a>
-        </button>
-
-        <button class="sign-up">
-            <a>Sign-up</a>
-        </button>
+        <br>
+        <div>
+            <button class="signin">
+             <a>Sign in</a>
+            </button>
+        </div>
+        <br>
+        <a href="Signup_screen.html" class="Signup">Create Account</a>
+        <!--<button class="signup">
+            <a>Sign up</a>
+        </button>-->
        </form>
     </div>
+  </div>
 </body>
 </html>
