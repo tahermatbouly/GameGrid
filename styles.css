@@ -4,6 +4,7 @@ body, html{
   padding: 0x;
   height: 100%;
   box-sizing: border-box;
+  /* background-color: black; */
 }
 
 p{
@@ -95,8 +96,6 @@ p{
   z-index: 1;
 }
 
-
-
 .welcome .frame{
   background-color: rgba(0, 0, 0, 0.75);
   padding: 5% 0% 5% 0%;
@@ -183,8 +182,10 @@ p{
 a{
   text-decoration: none;
   color: white;
+
 }
 
 #linkcolor{
   color: black;
+
 }
