@@ -4,6 +4,7 @@ body, html{
   padding: 0x;
   height: 100%;
   box-sizing: border-box;
+  /* background-color: black; */
 }
 
 p{
@@ -95,8 +96,6 @@ p{
   z-index: 1;
 }
 
-
-
 .welcome .frame{
   background-color: rgba(0, 0, 0, 0.75);
   padding: 5% 0% 5% 0%;
@@ -179,4 +178,9 @@ p{
   font-size: 25pt;
   /* text-decoration: underline dashed r; */
 
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
