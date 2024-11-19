@@ -4,6 +4,9 @@ body, html{
   padding: 0x;
   height: 100%;
   box-sizing: border-box;
+  /* display: flex; */
+  /* justify-content: center;
+  align-content: center; */
 }
 
 p{
@@ -89,6 +92,10 @@ p{
 
 
 .welcome{
+  /* display: flex;
+  justify-content:space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap; */
   text-align: center;
   padding: 7.5% 25% 25% 25%;
   position: relative;
@@ -98,12 +105,59 @@ p{
 
 
 .welcome .frame{
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
   background-color: rgba(0, 0, 0, 0.75);
   padding: 5% 0% 5% 0%;
   border-radius: 20px;
   border: 3px solid rgb(255, 255, 255);
   box-shadow: 0px 0px 50px 25px rgb(0, 0, 0);
   font-family: "Monaco", monospace;
+}
+.main-logo{
+  display: flex;
+  justify-content: center;
+}
+
+.main-logo p{
+  flex-shrink: 1; /* Enable shrinking */
+  overflow: hidden; /* Prevent overflow */
+  white-space: nowrap; /* Keep text on one line */
+  text-overflow: ellipsis; /* Add "..." for overflowed text */
+}
+
+.main-logo p{
+ flex-shrink: 1;
+}
+
+.moving-text{
+  display: flex;
+  justify-content: center;
+}
+
+.signin-buttons{
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 20%;
+  padding-right: 20%;
+  
+}
+
+.signin-buttons span{
+  flex-shrink: 1; /* Enable shrinking */
+  overflow: hidden; /* Prevent overflow */
+  white-space: nowrap; /* Keep text on one line */
+  text-overflow: ellipsis; /* Add "..." for overflowed text */
+}
+
+.signin-buttons button{
+  flex-shrink: 1; /* Enable shrinking */
+  overflow: hidden; /* Prevent overflow */
+  white-space: nowrap; /* Keep text on one line */
+  text-overflow: ellipsis; /* Add "..." for overflowed text */
 }
 
 .welcome .logo{
@@ -177,7 +231,7 @@ p{
   font-family: 'Pixelify Sans', sans-serif;
   font-size: 25pt;
   /* text-decoration: underline dashed r; */
-
+  /* margin-top: 3em; */
 }
 
 a{
