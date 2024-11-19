@@ -1,14 +1,17 @@
 body {
     background-image: url("Images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg");
-    background-size: cover;
-    margin: 0; /* Remove default margin */
-    display: flex;
-    justify-content: flex-start; /* Align to the left */
-    align-items: flex-start; /* Align at the top vertically */
-    height: 100vh; /* Full viewport height */
+    background-size:cover;
+    margin: 0;
+    padding: 0;
     font-family: "Monaco", monospace;
-    font-size: large;
+    overflow:hidden;
+    box-sizing: border-box;
+    
 }
+
+
+
+
 
 #root::before{
     content: '';
@@ -16,123 +19,36 @@ body {
     width: calc(100% + 30px); /* Expand width */
     height: calc(100% + 30px); /* Expand height */
     background: linear-gradient(
-      rgba(119, 0, 203, 0.15), /* Dark overlay */
+        rgba(119, 0, 203, 0.15), /* Dark overlay */
         rgba(0, 0, 0, 1)
-      ),
-      url("Images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    filter: blur(15px);
-    z-index: -1; /* Keeps the blur behind content */
+        ),
+        url("Images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+        filter: blur(15px);
+        z-index: -1; /* Keeps the blur behind content */
 }
-
-#greetings { 
-    font-size: 24px; 
+    
+    
+#root{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100vw;
+    height: 100vh;
     
 }
 
-.login_box{
-    background-color: rgba(0, 0, 0, 0.6);
-    color: cornsilk;
-    text-align: center;
-    padding: 7%;
-    margin: 30px; /* Space from the top and left */
-    box-sizing: border-box; /* Include padding in the width */
-    box-shadow: 0px 0px 10px 4px rgb(0, 0, 0);
-    font-family: "Monaco", monospace;
-    position: absolute;
-    margin-top: 140px;
-    margin-left: 20px;
-    left: 80px;
+.form{
+    grid-column: 1 / 4;
+    background-color: red;
+    border: 10px solid black;
 }
 
-button{
-    margin: 0pt 4% 0pt 4%;
-    font-size: 15pt;
-    font-weight: bold;
-    padding: 7.5pt;
-    border-radius: 40px;
-    border: 7.5px double black ;
-    color: rgb(0, 0, 0);
-    font-family: 'Pixelify Sans', sans-serif;
-}
-
-
-.signin{
-    background-color: rgb(119, 0, 203);
-    color: white;
-    transition: box-shadow 0.25s ease-in-out;
-}
-
-
-.signin:hover{
-    box-shadow: 0px 0px 25px 2px rgb(119, 0, 203);
-}
-
-.email{
-    
-    margin-left: 30px; /* Margin instead of position for alignment */
-}
-
-h1{
-    color: white;
-    margin-top: 15%;
-    font-size: 40px;
-    right: 310px;
-    transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transitions */
-    animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
-    position: absolute;
-
-    font-size: 80pt;
-    font-weight: bold;
-    /* font-family: "Monaco", monospace; */
-    text-decoration: 5px underline double rgb(119, 0, 203);
-    text-underline-offset: 15px;
-    /* text-decoration-thickness: 5px; */
-    animation: fadeIn 2s;
-}
-
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-p{
-    color: cornsilk;
-    margin-top: 80%;
-    font-size: 50px;
-    top:410px;
-    right:-10px;
-    position: absolute;
-
-    color: rgb(0, 0, 0);
-    font-size: 15pt;
-    /* font-family: monospace; */
-    font-weight: bold;
-    /* margin: 2% 0px 0px 0px; */
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 0px 5px 4px rgb(255, 255, 255);
-    margin: 0% 20% 7.5% 20%;
-    padding: 3pt 7pt 7pt 10pt;
-    border-radius: 50px;
-    animation: fadeIn 2s;
-}
-
-#grid{
-    font-family:'Pixelify Sans', sans-serif;
-    color: rgb(119, 0, 203);
-    
-}
-
-a{
-    text-decoration: none;
-    color: white;
-}
-
-input[type="email"], [type="password"]{
-    border-radius: 5px;
+.logo{
+    grid-column: 4 / 10;
+    background-color: red;
+    border: 10px solid black;
+    /* height: 100vh; */
+    justify-items: center;
+    align-content: center;
 }
