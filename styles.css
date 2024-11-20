@@ -1,12 +1,13 @@
 
 body, html{
   margin: 0;
-  padding: 0x;
-  height: 100%;
+  padding: 0;
   box-sizing: border-box;
-  /* display: flex; */
-  /* justify-content: center;
-  align-content: center; */
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+ 
+ 
 }
 
 p{
@@ -16,25 +17,24 @@ p{
 
 
 #root{
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  position: relative;
-  overflow:hidden;
+  width: 100vw;
+  /* height: 100%; */
+  /* overflow: hidden; */
+  
 }
 
-#root::before{
+.welcome::before{
   content: '';
   position: absolute;
-  top: -30px; /* Extend beyond the container */
+  top: -30px;
   left: -30px;
-  width: calc(100% + 60px); /* Expand width */
-  height: calc(100% + 60px); /* Expand height */
+  width: calc(100% + 60px); 
+  height: calc(100% + 60px);
   background: linear-gradient(
     rgba(119, 0, 203, 0.35), /* Dark overlay */
       rgba(0, 0, 0, 1)
     ),
-    url("Images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg");
+    url("https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(20px);
@@ -92,15 +92,33 @@ p{
 
 
 .welcome{
-  /* display: flex;
-  justify-content:space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap; */
   text-align: center;
-  padding: 7.5% 25% 25% 25%;
+  padding: 25% 25% 25% 25%;
   position: relative;
   z-index: 1;
+  background-size: cover;
+  position: relative;
+  overflow:hidden;
+  border-top: 2.5px solid black;
 }
+
+.pic{
+  width: 100%;
+  height: 60%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0), /* Dark overlay */
+      rgba(0, 0, 0, 0)
+    ),
+    url("Images/wallpaperflare.com_wallpaper.jpg");
+  background-size:cover;
+  background-position: center;
+  border-bottom: 2.5px solid black;
+  
+}
+
+
 
 
 
