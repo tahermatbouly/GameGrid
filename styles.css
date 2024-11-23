@@ -3,10 +3,11 @@ body, html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: auto;
-  display: flex;
-  justify-content: center;
- 
+  background-color: rgb(0, 0, 0);
+
+  /* overflow: auto; */
+  /* display: grid;
+  grid-template-rows: 1fr 3fr; */
  
 }
 
@@ -17,13 +18,13 @@ p{
 
 
 #root{
-  width: 100vw;
-  /* height: 100%; */
-  /* overflow: hidden; */
-  
+  display: grid;
+  grid-template-rows: 4fr 6fr;
+  gap: 10px;
+  height: 190vh;
 }
 
-.welcome::before{
+/* .welcome::before{
   content: '';
   position: absolute;
   top: -30px;
@@ -31,16 +32,16 @@ p{
   width: calc(100% + 60px); 
   height: calc(100% + 60px);
   background: linear-gradient(
-    rgba(119, 0, 203, 0.35), /* Dark overlay */
+    rgba(119, 0, 203, 0.35), 
       rgba(0, 0, 0, 1)
     ),
     url("https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(20px);
-  z-index: -1; /* Keeps the blur behind content */
+  z-index: -1; 
   
-}
+} */
 
 @keyframes blinkCursor {
   50% {
@@ -92,48 +93,86 @@ p{
 
 
 .welcome{
-  text-align: center;
-  padding: 25% 25% 25% 25%;
-  position: relative;
-  z-index: 1;
-  background-size: cover;
-  position: relative;
-  overflow:hidden;
-  border-top: 2.5px solid black;
+  
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 100vh;
+  
+}
+
+/* .pic img{
+  width: 99vw;
+  filter: blur(1px);
+  image-rendering: pixelated;
+} */
+
+.pic-frame{
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+  height: 90vh;
+}
+
+.pic-header{
+  grid-area: 1 / 1 / 1 / 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 0, 128);
+  font-family: 'Pixelify Sans', sans-serif;
+  /* font-family: "Monaco", monospace; */
+  font-size: 5em;
+  justify-items: center;
+  align-content: center;
+  z-index: 2;
+}
+
+.pic-header span{
+  color: rgb(119, 0, 203);
+  font-family: 'Pixelify Sans', sans-serif;
+
+
 }
 
 .pic{
-  width: 100%;
-  height: 60%;
+  grid-area: 1 / 1 / 5 / 1;
+  background-image: url("Images/pixilated-citycopy.jpg");
   margin: 0;
   padding: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0), /* Dark overlay */
-      rgba(0, 0, 0, 0)
-    ),
-    url("Images/wallpaperflare.com_wallpaper.jpg");
+  background-size: cover;
+
+  /* width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("Images/pixilated-citycopy.jpg");
   background-size:cover;
   background-position: center;
-  border-bottom: 2.5px solid black;
+  border-bottom: 5px solid rgb(0, 0, 0);
+  overflow: auto; */
+  
   
 }
 
 
-
+.frame-background{
+  background-image: url("Images/wallpaperflare.com_wallpaper\ \(1\).jpg");
+  background-size: cover;
+  filter: blur(50px);
+  grid-area: 1 / 1 / 4 / 25;
+}
 
 
 .welcome .frame{
 
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  /* flex-wrap: wrap; */
+  grid-area: 2 / 7 / 2 / 19;
   background-color: rgba(0, 0, 0, 0.75);
   padding: 5% 0% 5% 0%;
   border-radius: 20px;
   border: 3px solid rgb(255, 255, 255);
   box-shadow: 0px 0px 50px 25px rgb(0, 0, 0);
   font-family: "Monaco", monospace;
+  z-index: 1;
+
 }
 .main-logo{
   display: flex;
