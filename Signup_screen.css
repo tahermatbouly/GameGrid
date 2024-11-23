@@ -16,7 +16,6 @@ body, html{
 
 .form{
     grid-area: 1 / 5 / 11 / 51;
-    /* border: 5px solid black; */
     background-color: rgba(0, 0, 0, 0.803);
     color: white;
     justify-items: center;
@@ -26,7 +25,6 @@ body, html{
     overflow: auto;
     padding: 1em;
     z-index: 1;
-
     
 }
 
@@ -44,7 +42,6 @@ body, html{
     padding-top: 2em;
     padding-bottom: 2em;
 
-    /* align-items: stretch; */
 }
 
 .form .cont{
