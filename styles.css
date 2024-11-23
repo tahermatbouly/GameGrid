@@ -113,7 +113,7 @@ p{
   grid-template-columns: 1fr;
   height: 90vh;
   /* border-bottom: 5px double white; */
-  box-shadow: 0px 0px 20px 20pxrgb(0, 0, 0));
+  box-shadow: 0px 0px 20px 20pxrgb(0, 0, 0);
 }
 
 .pic-header{
