@@ -3,72 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Signup_screen.css" rel="stylesheet">
+    <link href="login_screen.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="10x10" href="Images/Screenshot 2024-11-19 012235.png">
     <title>GameGrid</title>
 </head>
 <body>
 
-  <div id="root">
-    <h1 class="description"><a href="index.html">Game<span id="grid">Grid</a></span></h1>
-    <p class="description"> Where your next epic journey begins. 🎮✨</p>
-    <div class="Signup_box">
-        <div id="greetings">
-            <strong id="greetings">Sign Up</strong>
+     <div id="root">
+        <div class="background">
+            <!-- <p>Game<span>Grid</span></p> -->
         </div>
-        <br>
-       <form>
+        <div class="form">
+            <form action="" method="">
+                
+                <div class="cont2">
+
+                    <div class="cont">
+                        <label for="first-name">First Name</label>
+                        <br>
+                        <input type="text" class="feild" id="first-name" name="first_name" required>
+                    </div>
+                    
             
-        <div>
-            <label class="firstname" for="FName">First Name</label>
+                    
+                    <div class="cont">
+                        <label for="last-name">Last Name</label>
+                        <br>
+                        <input type="text" class="feild" id="last-name" name="last_name" required>
+                    </div>
 
-            <input type="text" placeholder="First Name" required>
-        </div>
-        <br>
-
-        <div>
-            <label class="lastname" for="LName">Last Name</label>
-
-            <input type="text" placeholder="Last Name" required>
-        </div>
-        <br>
-        <div>
-            <label class="Username" for="username">Username</label>
-
-            <input type="username" placeholder="username" required>
-        </div>
-        <br>
-        <div>
-            <label class="email" for="email">Email</label>
-            
-            <input type="email" placeholder="example@mail.com" required>
-        </div>
-        <br>
-        <div>
-            <label class="password" for="password">Password</label>
-            
-            <input type="password" placeholder="password" required>
-
-        </div>
-        <br>
-        <div>
-            <label class="confirmpass" for="confirm">Re-write password</label>
-
-            <input type="password" placeholder="Re-write password" required>
-        </div>
-        <br>
-        <div>
-            <button class="signup">
-             <a>Sign up</a>
-            </button>
-        </div>
-        <br>
+                </div>
         
-        <!--<button class="signup">
-            <a>Sign up</a>
-        </button>-->
-       </form>
+                
+                <div class="cont">
+                    <label for="email">E-mail</label>
+                <br>
+                <input type="email" class="feild" id="email" name="email" placeholder="example@example.com" required>
+                </div>
+        
+                
+                <div class="cont">
+                    <label for="phone">Phone Number</label>
+                <br>
+                <input type="tel" class="feild" id="phone" name="phone" placeholder="Optional">
+                </div>
+        
+                
+                <div class="cont">
+                    <label for="dob">Date of Birth</label>
+                <br>
+                <input type="date" class="feild" id="dob" name="dob" required>
+                </div>
+    
+                
+                <div class="cont">
+                    <label for="password">Password</label>
+                <br>
+                <input type="password" class="feild" id="password" name="password" required>
+                </div>
+        
+                
+                <div class="cont">
+                    <label for="repeat-password">Repeat Password</label>
+                <br>
+                <input type="password" class="feild" id="repeat-password" name="repeat_password" required>
+                </div>
+        
+                
+                <div class="cont">
+                    <button type="submit" class="register">Register</button>
+                </div>
+            </form>
+        </div>
+        <div class="logo">
+            
+        </div>
     </div>
-  </div>
+  
 </body>
 </html>
