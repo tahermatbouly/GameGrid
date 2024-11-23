@@ -112,12 +112,14 @@ p{
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: 1fr;
   height: 90vh;
+  /* border-bottom: 5px double white; */
+  box-shadow: 0px 0px 20px 20pxrgb(0, 0, 0));
 }
 
 .pic-header{
   grid-area: 1 / 1 / 1 / 1;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: rgb(255, 0, 128);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgb(255, 255, 255);
   font-family: 'Pixelify Sans', sans-serif;
   /* font-family: "Monaco", monospace; */
   font-size: 5em;
@@ -127,7 +129,7 @@ p{
 }
 
 .pic-header span{
-  color: rgb(119, 0, 203);
+  color: rgb(255, 0, 162);
   font-family: 'Pixelify Sans', sans-serif;
 
 
@@ -135,7 +137,7 @@ p{
 
 .pic{
   grid-area: 1 / 1 / 5 / 1;
-  background-image: url("Images/pixilated-citycopy.jpg");
+  background-image: url("Images/pixilated-controllers.webp");
   margin: 0;
   padding: 0;
   background-size: cover;
