@@ -96,8 +96,14 @@ body, html{
 }
 
 .logo{
+    grid-area: 4 / 66 / 7 / 87;
+    background-image: url("Images/1618c217a72e62b638c998b57ec2151a.png");
+    background-size: cover;
+    z-index: 1;
+}
+
+.logo:hover{
     grid-area: 4 / 65 / 7 / 88;
-    /* background-color: aqua; */
     background-image: url("Images/1618c217a72e62b638c998b57ec2151a.png");
     background-size: cover;
     z-index: 1;
