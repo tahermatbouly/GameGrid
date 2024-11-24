@@ -8,14 +8,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <link rel="page" href="D:\Taher\Git-Hub\GameGrid\login_screen.html">
-    <link rel="icon" type="image/png" sizes="10x10" href="Images/Screenshot 2024-11-19 012235.png">
+    <link rel="icon" type="image/png" sizes="10x10" href="Images/1618c217a72e62b638c998b57ec2151a.png">
+    <script src="script.js"></script>
     
     <title>GameGrid</title>
 </head>
 <body>
     
     <div id="root">
+        <div class="pic-frame">
+
+            <div class="pic-header">
+
+                <p>Ready for new <span id="adventures">ADVENTURES</span> ?</p>
+
+            </div>
+
+            <div class="pic">
+
+            </div>
+
+            <button class="slide-button-right" onclick="slideRight()">
+                <div>
+                     &rarr;
+                </div>
+            </button>
+
+            <button class="slide-button-left" onclick="slideLeft()">
+                <div>
+                    &larr;
+                </div>
+            </button>
+
+        </div>
         <div class="welcome">
+            <div class="frame-background">
+
+            </div>
             <div class="frame">
 
                <div class="main-logo">
@@ -33,18 +62,14 @@
                 </div>
 
                <div class="signin-buttons">
-                <button class="signin">
-                    <a href="login_screen.html">
+                <button class="signin" onclick="switchToLoginPage()">
                         Sign in
-                    </a>
                 </button>
                 <span id="lets-begin">
                     Lets Begin!
                 </span>
-                <button class="signup">
-                    <a id="linkcolor" href="Signup_screen.html">
+                <button class="signup" onclick="switchToSignupPage()">
                         Sign Up
-                    </a>
                 </button>
                </div>
             </div>

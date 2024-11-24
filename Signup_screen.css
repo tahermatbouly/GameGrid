@@ -1,152 +1,122 @@
-body {
-    background-image: url("Images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg");
-    background-size: cover;
-    margin: 0; /* Remove default margin */
-    display: flex;
-    justify-content: flex-start; /* Align to the left */
-    align-items: flex-start; /* Align at the top vertically */
-    height: 100vh; /* Full viewport height */
+body, html{
+    margin: 0;
+    padding: 0;
     font-family: "Monaco", monospace;
-    font-size: large;
+    box-sizing: border-box;
+    background-color: black;
 }
 
-#root::before{
-    content: '';
-    position: fixed;
-    width: calc(100% + 30px); /* Expand width */
-    height: calc(100% + 30px); /* Expand height */
-    background: linear-gradient(
-      rgba(119, 0, 203, 0.15), /* Dark overlay */
-        rgba(0, 0, 0, 1)
-      ),
-      url("Images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    filter: blur(15px);
-    z-index: -1; /* Keeps the blur behind content */
+#root{
+    
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(10, 10vh);
+    grid-template-columns: repeat(100, 1fr);
 }
 
-#greetings { 
-    font-size: 24px; 
+.form{
+    grid-area: 1 / 5 / 11 / 51;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.5em;
+    overflow: auto;
+    padding: 1em;
+    box-shadow: 0px 0px 50px 5px rgb(0, 0, 0);
+    z-index: 1;
     
 }
 
-.Signup_box {
+.form::-webkit-scrollbar {
+    display: none; 
+}
+
+
+.form form{
     display: flex;
-    flex-direction: column; /* Align items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    background-color: rgba(0, 0, 0, 0.6);
-    color: cornsilk;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+}
+
+.form .cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    padding: 7%;
-    margin: 30px;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 10px 4px rgb(0, 0, 0);
-    font-family: "Monaco", monospace;
-    position: absolute;
-    margin-top: 140px;
-    margin-left: 20px;
-    left: 80px;
+    width: 70%;
+    font-size: 1.1em;
 }
 
-.Signup_box form {
+.cont2 {
     display: flex;
-    flex-direction: column; /* Stack form items vertically */
-    gap: 15px; /* Add space between form items */
-    width: 100%; /* Make form take full width of the container */
+    justify-content: center;
+    gap: 1em;
 }
 
-button{
-    margin: 0pt 4% 0pt 4%;
-    font-size: 15pt;
-    font-weight: bold;
-    padding: 7.5pt;
-    border-radius: 40px;
-    border: 7.5px double black ;
-    color: rgb(0, 0, 0);
-    font-family: 'Pixelify Sans', sans-serif;
-}
-
-
-.signup{
-    background-color: rgb(119, 0, 203);
-    color: white;
-    transition: box-shadow 0.25s ease-in-out;
-}
-
-
-.signup:hover{
-    box-shadow: 0px 0px 25px 2px rgb(119, 0, 203);
-}
-
-
-
-h1{
-    color: white;
-    margin-top: 15%;
-    font-size: 40px;
-    right: 230px;
-    transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transitions */
-    animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
-    position:fixed;
+.cont2 .cont{
     display: flex;
-    font-size: 80pt;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 45%;
+    font-size: 1.1em;
+}
+
+.cont .feild{
+    padding: 0.65em;
+    border-radius: 0.5em;
+    border: 0;
+    font-size: 0.65em;
+    /* width: 100%; */
+}
+
+.form .register{
+    align-self: center;
+    width: 35%;
+    padding: 1em;
+    border-radius: 4em;
+    font-size: 0.6em;
     font-weight: bold;
-    /* font-family: "Monaco", monospace; */
-    text-decoration: 5px underline double rgb(119, 0, 203);
-    text-underline-offset: 15px;
-    /* text-decoration-thickness: 5px; */
 }
 
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+.background{
+    grid-area: 1 / 1 / 11 / 101;
+    background-image: url("Images/wallpaperflare.com_wallpaper\ \(1\).jpg");
+    background-size: cover;
+    z-index: 0;
+    filter: blur(50px);
 
-p{
-    color: cornsilk;
-    margin-top: 80%;
-    font-size: 50px;
-    top:410px;
-    right:-5%;
-    position: fixed;
-    margin-left: 50px;
-    color: rgb(0, 0, 0);
-    font-size: 15pt;
-    font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 0px 5px 4px rgb(255, 255, 255);
-    margin: 0% 20% 7.5% 20%;
-    padding: 3pt 7pt 7pt 10pt;
-    border-radius: 50px;
-    animation: fadeIn 2s;
 }
 
-#grid{
-    color: rgb(119, 0, 203);
+.logo{
+    grid-area: 4 / 66 / 7 / 87;
+    background-image: url("Images/1618c217a72e62b638c998b57ec2151a.png");
+    background-size: cover;
+    z-index: 1;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+.logo:hover{
+    grid-area: 4 / 65 / 7 / 88;
+    background-image: url("Images/1618c217a72e62b638c998b57ec2151a.png");
+    background-size: cover;
+    z-index: 1;
 }
 
 
 
-.Signup_box input,
-.Signup_box button {
-    width: 80%; /* Set a consistent width for inputs and buttons */
-    padding: 10px; /* Add padding for better appearance */
-    margin: 0 auto; /* Center inputs and buttons */
-}
 
-/*making the input fields rounded*/
-input[type="email"], input[type="password"], input[type="text"],input[type="username"] {
-    border-radius: 10px; 
-    padding: 10px; 
-  }
+
+
+
+
+
+
+    
+    
