@@ -71,7 +71,6 @@ p{
   border-right: 0.2em solid rgb(119, 0, 203); /* Cursor */
   animation: typeAndDelete 8s steps(50) infinite,
     blinkCursor 0.5s step-end infinite alternate;
-  /* margin-top: 1.5em; */
 }
 
 
@@ -99,7 +98,6 @@ p{
   background-color: rgba(0, 0, 0, 0.85);
   color: rgb(255, 255, 255);
   font-family: 'Pixelify Sans', sans-serif;
-  /* font-family: "Monaco", monospace; */
   font-size: 5em;
   justify-items: center;
   align-content: center;
@@ -111,6 +109,7 @@ p{
   font-family: 'Pixelify Sans', sans-serif;
 
 
+
 }
 
 .slide-button-right{
@@ -120,7 +119,6 @@ p{
   border-radius: 10px 0px 0px 10px;
   font-size: 2em;
   color: rgba(255, 255, 255, 0.6);
-  /* display: ; */
   z-index: 2;
 }
 
@@ -241,7 +239,6 @@ p{
   margin: 0px 0px 2% 0px;
   text-decoration: 5px underline double rgb(119, 0, 203);
   text-underline-offset: 15px;
-  /* text-decoration-thickness: 5px; */
 }
 
 .welcome .logo #grid{
@@ -252,9 +249,7 @@ p{
 .welcome .message{
   color: rgb(0, 0, 0);
   font-size: 13pt;
-  /* font-family: monospace; */
   font-weight: bold;
-  /* margin: 2% 0px 0px 0px; */
   background-color: rgba(255, 255, 255, 0.6);
   margin: 0% 20% 7.5% 20%;
   padding: 3pt 3pt 7pt 3pt;
@@ -295,7 +290,6 @@ p{
 .welcome .signin:hover{
   
   box-shadow: 0px 0px 25px 2px rgb(119, 0, 203);
-  /* transition: 0.5s; */
 
 }
 
@@ -303,8 +297,6 @@ p{
   color: white;
   font-family: 'Pixelify Sans', sans-serif;
   font-size: 25pt;
-  /* text-decoration: underline dashed r; */
-  /* margin-top: 3em; */
 }
 
 a{
