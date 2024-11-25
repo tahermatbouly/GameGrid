@@ -23,6 +23,7 @@
                     <label for="email">E-mail</label>
                 <br>
                 <input type="email" class="feild" id="email" name="email" placeholder="example@example.com" required>
+                <div class="error"></div>
                 </div>
         
                 
@@ -32,6 +33,7 @@
                     <label for="password">Password</label>
                 <br>
                 <input type="password" class="feild" id="password" name="password" required>
+                <div class="error"></div>
                 </div>
         
                 
@@ -39,7 +41,7 @@
         
                 
                 <div class="cont">
-                    <button type="submit" class="register">Log In</button>
+                    <button type="submit" class="register" onclick="func()">Log In</button>
                 </div>
             </form>
         </div>
