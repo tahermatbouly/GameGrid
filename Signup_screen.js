@@ -98,3 +98,9 @@ const validateInputs = () => {
     setSuccessFor(username);
   }
 };
+
+
+
+function switchToWelcomePage(){
+    window.location.href = "index.html";
+}
