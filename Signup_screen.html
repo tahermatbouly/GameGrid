@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="Signup_screen.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="10x10" href="Images/1618c217a72e62b638c998b57ec2151a.png">
-    <script src="Signup_screen.js"></script>
     <title>GameGrid</title>
 </head>
 <body>
@@ -19,76 +18,76 @@
                 
                 <div class="cont2">
 
-                    <div class="cont">
+                    <div class="cont" id="first-name">
                         <label for="firstname">First Name</label>
                         <br>
-                        <input type="text" class="feild" id="firstname" name="first-name" required>
+                        <input type="text" class="feild field" id="firstname" name="first-name" required>
                         <div class="error"></div>
                     </div>
                     
             
                     
-                    <div class="cont">
+                    <div class="cont " id="last-name">
                         <label for="lastname">Last Name</label>
                         <br>
-                        <input type="text" class="feild" id="lastname" name="last-name" required>
+                        <input type="text" class="feild field" id="lastname" name="last-name" required>
                         <div class="error"></div>
                     </div>
 
                 </div>
         
                 
-                <div class="cont">
+                <div class="cont " id="e-mail">
                     <label for="email">E-mail</label>
                     <br>
-                    <input type="email" class="feild" id="email" name="email" placeholder="example@example.com" required>
+                    <input type="email" class="feild field" id="email" name="email" placeholder="example@example.com" required>
                     <div class="error"></div>
                 </div>
 
-                <div class="cont">
+                <div class="cont " id="user-name">
                     <label for="Username">Username</label>
                     <br>
-                    <input type="Username" class="feild" id="Username" name="Username" placeholder="Username" required>
+                    <input type="Username" class="feild field" id="username" name="Username" placeholder="Username" required>
                     <div class="error"></div>
                 </div>
         
                 
-                <div class="cont">
+                <div class="cont " id="phone-number">
                     <label for="phone">Phone Number</label>
                     <br>
-                    <input type="tel" class="feild" id="phone" name="phone" placeholder="Optional">
+                    <input type="number" class="feild " id="phonenumber" name="phone" placeholder="Optional">
                     <div class="error"></div>
                 </div>
         
                 
-                <div class="cont">
+                <div class="cont " id="d-o-b">
                     <label for="dob">Date of Birth</label>
                     <br>
-                    <input type="date" class="feild" id="dob" name="dob" required>
+                    <input type="date" class="feild" id="dateofbirth" name="dob" required>
                     <div class="error"></div>
                 </div>
     
                 
-                <div class="cont">
+                <div class="cont " id="pass-word">
                     <label for="password">Password</label>
                     <br>
-                    <input type="password" class="feild" id="password" name="password" required>
+                    <input type="password" class="feild field" id="password" name="password" required>
                     <div class="error"></div>
                 </div>
         
                 
-                <div class="cont">
+                <div class="cont " id="repeat-password">
                     <label for="repeat-password">Repeat Password</label>
                     <br>
-                    <input type="password" class="feild" id="repeat-password" name="repeat_password" required>
+                    <input type="password" class="feild field" id="repeat-password" name="repeat_password" required>
                     <div class="error"></div>
                 </div>
         
                 
-                <div class="cont">
-                    <button type="submit" class="register">Register</button>
-                </div>
             </form>
+            <div class="cont">
+                <button class="register" onclick="checkIfValid()">Register</button>
+            </div>
         </div>
         <div class="logo" onclick="switchToWelcomePage()">
             
@@ -96,5 +95,9 @@
         <!-- <img src="Images/1618c217a72e62b638c998b57ec2151a.png" alt="" class="logo" onclick="switchToWelcomePage()" width="400px"> -->
     </div>
   
+
+
+    <script src="Signup_screen.js"></script>
+
 </body>
 </html>
