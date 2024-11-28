@@ -43,37 +43,37 @@ function checkIfValid(){
 
       if(i == 0){
         emptyField.textContent = `Please enter First name`;
-        emptyField.previousElementSibling.style.backgroundColor = "rgba(255, 100, 100, 1)";
+        emptyField.previousElementSibling.style.backgroundColor = "rgba(255, 150, 150, 1)";
         emptyField.style.color = "red";
         emptyField.style.fontSize = "15px";
       }
       if(i == 1){
         emptyField.textContent = `Please enter Last name`;
-        emptyField.previousElementSibling.style.backgroundColor = "rgba(255, 100, 100, 1)";
+        emptyField.previousElementSibling.style.backgroundColor = "rgba(255, 150, 150, 1)";
         emptyField.style.color = "red";
         emptyField.style.fontSize = "15px";
       }
       if(i == 2){
         emptyField.textContent = `Please enter Email`;
-        emptyField.previousElementSibling.style.backgroundColor = "rgba(255, 100, 100, 1)";
+        emptyField.previousElementSibling.style.backgroundColor = "rgba(255, 150, 150, 1)";
         emptyField.style.color = "red";
         emptyField.style.fontSize = "15px";
       }
       if(i == 3){
         emptyField.textContent = `Please enter Username`;
-        emptyField.previousElementSibling.style.backgroundColor = "rgba(255, 100, 100, 1)";
+        emptyField.previousElementSibling.style.backgroundColor = "rgba(255, 150, 150, 1)";
         emptyField.style.color = "red";
         emptyField.style.fontSize = "15px";
       }
       if(i == 4){
         emptyField.textContent = `Please enter Date Of Birth`;
-        emptyField.previousElementSibling.style.backgroundColor = "rgba(255, 100, 100, 1)";
+        emptyField.previousElementSibling.style.backgroundColor = "rgba(255, 150, 150, 1)";
         emptyField.style.color = "red";
         emptyField.style.fontSize = "15px";
       }
       if(i == 5){
         emptyField.textContent = `Please enter a Password`;
-        emptyField.previousElementSibling.style.backgroundColor = "rgba(255, 100, 100, 1)";
+        emptyField.previousElementSibling.style.backgroundColor = "rgba(255, 150, 150, 1)";
         emptyField.style.color = "red";
         emptyField.style.fontSize = "15px";
       }
