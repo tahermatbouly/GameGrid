@@ -14,7 +14,7 @@
 //   validateInputs();
 // });
 
-<<<<<<< HEAD
+
 function validateInputs() {
   const emailValue = email.value.trim();
   const usernameValue = username.value.trim();
@@ -40,7 +40,7 @@ function validateInputs() {
   if (usernameValue === "") {
     setErrorFor(username, "Username is required");
   }
-=======
+ 
 // setErrorFor = (input, message) => {
 //   const inputControl = input.parentElement;
 //   const errorDisplay = inputControl.querySelector(".error");
@@ -221,7 +221,8 @@ function checkIfValid(){
 
 
 
->>>>>>> 33cb0e49f5dc8032abd7d1ce58488302b668cd2e
+
+
 
   if (passwordValue === "") {
     setErrorFor(password, "Password is required");
