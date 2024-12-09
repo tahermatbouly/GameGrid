@@ -1,18 +1,10 @@
 
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: rgb(231, 35, 35);
-}
-
-
-
 body,html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: rgb(0, 0, 0);
+  font-family: "Courier New", Courier, monospace;
 }
 
 body::-webkit-scrollbar {
@@ -31,7 +23,7 @@ body::-webkit-scrollbar {
   background-image: url("Images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg");
   background-size: cover;
   z-index: 0;
-  filter: blur(50px);
+  
 }
 
 
@@ -39,8 +31,11 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(255, 127, 39);
+  background-color: transparent; /* Make the background color transparent */
   padding: 10px 20px;
+  position: fixed; /* Keep the navbar fixed at the top */
+  width: 100%; /* Make it full width */
+  z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 .nav-list {
@@ -64,5 +59,6 @@ body::-webkit-scrollbar {
 }
 
 .nav-list li a:hover {
-  color: #ffd700; /* Change the color on hover */
+  color: rgb(119, 0, 203); /* Change the color on hover */
 }
+
