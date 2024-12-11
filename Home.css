@@ -159,9 +159,9 @@ body::-webkit-scrollbar {
   
 }
 
-.elden{
+.gta{
   grid-area: 20/ 70 / 80 / 94 ;
-  background-image: url("Images/elden-ring-button-03-1623460560664.jpg");
+  background-image: url("Images/gta.jpg");
   background-size: cover;
   z-index:1;
   border-radius: 10px;
