@@ -105,18 +105,12 @@ body::-webkit-scrollbar {
 }
 
 .logo {
-  grid-area: 1 / 1 / 20 / 13; /* Adjust the column span to 13 */
+  grid-area: 2 / 2 / 15 / 10; /* Adjust the column span to 13 */
   background-image: url("Images/1618c217a72e62b638c998b57ec2151a.png");
   background-size: cover;
   z-index: 1;
 }
 
-.logo:hover {
-  grid-area: 1 / 1 / 21 / 13; /* Adjust the column span to 14 */
-  background-image: url("Images/1618c217a72e62b638c998b57ec2151a.png");
-  background-size: cover;
-  z-index: 1;
-}
 
 .search-bar {
   position: absolute;
@@ -131,4 +125,46 @@ body::-webkit-scrollbar {
   color: white;
   padding-left: 20px;
   font-size: 16px;
+}
+
+
+.hits {
+  grid-area: 15 / 20 / 15 / 6; 
+  text-align: center; 
+  font-size: 25px;
+  color: white; /* Optional: Set text color for visibility */
+  padding: 20px;    
+  z-index: 1;
+  font-family: "Monaco", monospace;
+}
+
+.fc{
+  grid-area: 20/ 6 / 80 / 20 ;
+  background-image: url("Images/fc25.jpeg");
+  background-size: cover;
+  z-index:1;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.read-dead{  
+  grid-area: 20/ 32 / 80 / 56 ;
+  background-image: url("Images/readdeadredemption.avif");
+  background-size: cover;
+  z-index:1;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+.elden{
+  grid-area: 20/ 70 / 80 / 94 ;
+  background-image: url("Images/elden-ring-button-03-1623460560664.jpg");
+  background-size: cover;
+  z-index:1;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
 }
