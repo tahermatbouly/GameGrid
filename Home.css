@@ -148,7 +148,7 @@ body::-webkit-scrollbar {
   transition: transform 0.3s ease-in-out;
 }
 
-.read-dead{  
+.red-dead{  
   grid-area: 20/ 32 / 80 / 56 ;
   background-image: url("Images/readdeadredemption.avif");
   background-size: cover;
