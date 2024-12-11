@@ -104,16 +104,31 @@ body::-webkit-scrollbar {
   transform: translateY(0); /* Slide down */
 }
 
-.logo{
-  grid-area: 1 / 100 / 20/ 87;
+.logo {
+  grid-area: 1 / 1 / 20 / 13; /* Adjust the column span to 13 */
   background-image: url("Images/1618c217a72e62b638c998b57ec2151a.png");
   background-size: cover;
   z-index: 1;
 }
 
-.logo:hover{
-  grid-area: 1 / 101 / 20/ 87;
+.logo:hover {
+  grid-area: 1 / 1 / 21 / 13; /* Adjust the column span to 14 */
   background-image: url("Images/1618c217a72e62b638c998b57ec2151a.png");
   background-size: cover;
   z-index: 1;
+}
+
+.search-bar {
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  width: 15%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding-left: 20px;
+  font-size: 16px;
 }
