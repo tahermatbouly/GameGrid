@@ -5,6 +5,7 @@ html {
   box-sizing: border-box;
   background-color: rgb(0, 0, 0);
   font-family: "Monaco", monospace;
+  z-index: 0;
 }
 
 body::-webkit-scrollbar {
@@ -13,60 +14,65 @@ body::-webkit-scrollbar {
 
 #root {
   display: grid;
-  grid-template-rows: repeat(1fr, 100);
-  grid-template-columns: repeat(1fr, 100);
+  grid-template-rows: repeat(150, 1fr);
+  grid-template-columns: repeat(50, 1fr);
   gap: 0px;
-  height: 100vh;
+  height: 150vh;
 }
 
-.background {
-  grid-area: 1 / 1 / 101 / 101;
-  background-image: url("Images/wallpaperflare.com_wallpaper\ \(1\).jpg");
+.background1 {
+  grid-area: 1 / 1 / 151 / 51;
+  background-image: url("Images/wallpaperflare.com_wallpaper.jpg");
   background-size: cover;
   z-index: 0;
   filter: blur(50px);
 }
+/* .background2 {
+  grid-area: 61 / 1 / 101 / 51;
+  background-image: url("Images/wallpaperflare.com_wallpaper4.jpg");
+  background-size: cover;
+  z-index: 0;
+  filter: blur(50px);
+} */
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  grid-area: 2 / 10 / 14 / 51;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.navbar-child {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: transparent; /* Make the background color transparent */
-  padding: 10px 20px;
-  position: fixed; /* Keep the navbar fixed at the top */
-  width: 100%; /* Make it full width */
-  z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 .nav-list {
+  padding: 0px;
+  margin: 0px;
   display: flex;
+  gap: 3em;
+  justify-content: space-evenly;
+  align-items: center;
   list-style: none;
-  margin-left: 400px;
-}
-
-.nav-list li {
-  margin-right: 20px;
-}
-
-.nav-list li:last-child {
-  margin-right: 0;
 }
 
 .nav-list li a {
   text-decoration: none;
   color: white;
-  font-size: 18px;
   transition: color 0.3s ease-in-out;
+  font-size: 1.5em;
 }
 
 .nav-list li a:hover {
-  color: rgb(119, 0, 203); /* Change the color on hover */
+  color: rgb(187, 0, 255);
 }
 
 .dropdown {
-  position: relative;
+  /* position: relative;
   display: inline-block;
-  margin-right: 25px;
+  margin-right: 25px; */
 }
 
 .dropdown-content {
@@ -104,63 +110,298 @@ body::-webkit-scrollbar {
 }
 
 .logo {
-  grid-area: 2 / 2 / 15 / 10; /* Adjust the column span to 13 */
-  background-image: url("Images/1618c217a72e62b638c998b57ec2151a.png");
-  background-size: cover;
+  grid-area: 2 / 1 / 14 / 10;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  border-right: 2px solid rgba(0, 0, 0, 0.5);
   z-index: 1;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .search-bar {
-  position: absolute;
-  top: 50%;
-  left: 85%;
-  transform: translate(-50%, -50%);
-  width: 15%;
-  height: 40px;
-  border-radius: 20px;
+  height: 10px;
+  border-radius: 2em;
   border: none;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(193, 193, 193, 0.568);
+
   color: white;
-  padding-left: 20px;
+  padding: 10px;
   font-size: 16px;
+}
+.search-bar::placeholder {
+  color: white;
+  text-align: center;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
 }
 
 .hits {
-  grid-area: 15 / 20 / 15 / 6;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   text-align: center;
-  font-size: 25px;
-  color: white; /* Optional: Set text color for visibility */
+  border-radius: 0.2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0px;
+  margin: 0px;
+  grid-area: 24 / 5 / 33 / 47;
+  font-size: 3em;
+  color: white;
   padding: 20px;
+  box-shadow: 0px 0px 15px 4px rgb(255, 255, 255);
   z-index: 1;
   font-family: "Monaco", monospace;
 }
 
-.fc {
-  grid-area: 20/ 6 / 80 / 20;
-  background-image: url("Images/fc25.jpeg");
-  background-size: cover;
-  z-index: 1;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
+.game {
+  position: relative;
 }
 
-.red-dead {
-  grid-area: 20/ 32 / 80 / 56;
-  background-image: url("Images/readdeadredemption.avif");
-  background-size: cover;
+.game-container .game img {
+  border-radius: 0.5em;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  flex: 1;
   z-index: 1;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
 }
 
-.gta {
-  grid-area: 20/ 70 / 80 / 94;
-  background-image: url("Images/gta.jpg");
-  background-size: cover;
+.game:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5em;
+}
+
+.game-container {
+  display: flex;
+  gap: 2em;
+  justify-content: space-evenly;
+  padding: 2em;
+  grid-area: 35/ 5 / 105 / 47;
+  border-radius: 0.5em;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px 4px rgb(255, 255, 255);
   z-index: 1;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
+}
+
+
+
+#root2 {
+  display: grid;
+  grid-template-rows: repeat(500, 1fr);
+  grid-template-columns: repeat(50, 1fr);
+  gap: 0px;
+  height: 500vh;
+  z-index: 1;
+}
+
+
+
+.background2 {
+  grid-area: 1 / 1 / 401 / 51;
+  background-image: url("Images/wallpaperflare.com_wallpaper5.jpg");
+  background-size: cover;
+  filter: blur(50px);
+}
+
+.football .scroll-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3em;
+  padding: 1em;
+  overflow: auto;
+}
+
+.football .scroll-container .game img {
+  width: 300px;
+  height: auto;
+  border-radius: 0.5em;
+}
+
+.football {
+  grid-area: 1 / 1 / 80 / 51;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  /* border-radius: 0.5em; */
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 15px 4px rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.football p {
+  text-align: center;
+  font-size: 3em;
+  padding: 0.5em;
+  margin: 0;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+.fps .scroll-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3em;
+  padding: 1em;
+  overflow: auto;
+}
+
+.fps .scroll-container .game img {
+  width: 300px;
+  height: auto;
+  border-radius: 0.5em;
+}
+
+.fps {
+  grid-area: 110 / 1 / 200 / 51;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  /* border-radius: 0.5em; */
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 15px 4px rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.fps p {
+  text-align: center;
+  font-size: 3em;
+  padding: 0.5em;
+  margin: 0;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.racing .scroll-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3em;
+  padding: 1em;
+  overflow: auto;
+}
+
+.racing .scroll-container .game img {
+  width: 300px;
+  height: auto;
+  border-radius: 0.5em;
+}
+
+.racing {
+  grid-area: 230 / 1 / 310 / 51;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  /* border-radius: 0.5em; */
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 15px 4px rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.racing p {
+  text-align: center;
+  font-size: 3em;
+  padding: 0.5em;
+  margin: 0;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+.adventure .scroll-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3em;
+  padding: 1em;
+  /* margin-top: 2em; */
+  /* margin-bottom: 2em; */
+  overflow: auto;
+}
+
+.adventure .scroll-container .game img {
+  width: 300px;
+  height: auto;
+  border-radius: 0.5em;
+}
+
+.adventure {
+  grid-area: 340 / 1 / 430 / 51;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 15px 4px rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.adventure p {
+  text-align: center;
+  font-size: 3em;
+  padding: 0.5em;
+  margin: 0;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+.scroll-container .game {
+  text-align: center;
+  font-size: 1.5em;
+  word-break: break-all;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: auto;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1em;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+  border-radius: 1em;
 }
