@@ -1,5 +1,5 @@
-
-body,html {
+body,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,7 +11,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-#root{
+#root {
   display: grid;
   grid-template-rows: repeat(1fr, 100);
   grid-template-columns: repeat(1fr, 100);
@@ -27,7 +27,6 @@ body::-webkit-scrollbar {
   filter: blur(50px);
 }
 
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -42,7 +41,7 @@ body::-webkit-scrollbar {
 .nav-list {
   display: flex;
   list-style: none;
-  margin-left:400px;
+  margin-left: 400px;
 }
 
 .nav-list li {
@@ -111,7 +110,6 @@ body::-webkit-scrollbar {
   z-index: 1;
 }
 
-
 .search-bar {
   position: absolute;
   top: 50%;
@@ -127,43 +125,41 @@ body::-webkit-scrollbar {
   font-size: 16px;
 }
 
-
 .hits {
-  grid-area: 15 / 20 / 15 / 6; 
-  text-align: center; 
+  grid-area: 15 / 20 / 15 / 6;
+  text-align: center;
   font-size: 25px;
   color: white; /* Optional: Set text color for visibility */
-  padding: 20px;    
+  padding: 20px;
   z-index: 1;
   font-family: "Monaco", monospace;
 }
 
-.fc{
-  grid-area: 20/ 6 / 80 / 20 ;
+.fc {
+  grid-area: 20/ 6 / 80 / 20;
   background-image: url("Images/fc25.jpeg");
   background-size: cover;
-  z-index:1;
+  z-index: 1;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
 }
 
-.red-dead{  
-  grid-area: 20/ 32 / 80 / 56 ;
+.red-dead {
+  grid-area: 20/ 32 / 80 / 56;
   background-image: url("Images/readdeadredemption.avif");
   background-size: cover;
-  z-index:1;
+  z-index: 1;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
-  
 }
 
-.gta{
-  grid-area: 20/ 70 / 80 / 94 ;
+.gta {
+  grid-area: 20/ 70 / 80 / 94;
   background-image: url("Images/gta.jpg");
   background-size: cover;
-  z-index:1;
+  z-index: 1;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
