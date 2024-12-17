@@ -1,72 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="red.css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="10x10" href="Images/1618c217a72e62b638c998b57ec2151a.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="red.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="10x10"
+      href="Images/1618c217a72e62b638c998b57ec2151a.png"
+    />
     <title>GameGrid</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="root">
-        
-        <div class="navbar">
-                
-            <ul class="nav-list">
-                <div class="dropdown">
-                    <li><a href="#Your Store">Your Store</a>
-                        <div class="dropdown-content">
-                            <a href="prefrences">Prefrences</a>
-                            <a href="recomndations">Recomndations</a>
-                            <a href="new releases">New Releases</a>
-                            <a href="popular">Popular</a>
-                        </div>
-                    </li>
-                </div>
-                <div class="dropdown">
-                    <li><a href="#Categories">Categories</a>
-                        <div class="dropdown-content">
-                            <a href="action">Action</a>
-                            <a href="arcade">Arcade</a>
-                            <a href="adventure">Adventure</a>
-                            <a href="racing">Racing</a>
-                            <a href="shooter">Shooter</a>
-                            <a href="sports">Sports</a>
-                    </li>
-                </div>
-                <div class="dropdown">
-                    <li><a href="#Special Selections">Special Selections</a>
-                        <div class="dropdown-content">
-                            <a href="free">Free to play</a>
-                            <a href="early">Early Access</a>
-                            <a href="demo">Demos</a>
-                    </li>
-                </div>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <input type="text" placeholder="Search" class="search-bar">
+      <div class="header">
+        <div class="menu">
+          <span>Home</span>
+          <span>Similar Games</span>
+          <span>Explore More</span>
+          <span>About Creator</span>
+          <span>Help</span>
         </div>
-        
-        <div class="red-dead">
+
+        <input class="search-bar" type="text" placeholder="Search" />
+        <div class="cart">
+          <img src="Images/cart.png" alt="" />
         </div>
-        
-        <span class="description">
-            <p class="p1">Red Dead Redemption 2 is an open-world action-adventure game <br> played from either a third-person perspective or first-person perspective.</p>
-            <p class="p2">Red Dead Redemption is an epic Western-themed action-adventure game set in the American frontier of 1911.<br> You play as John Marston, a former outlaw forced to hunt down his old gang to save his family</p>
-        </span>
-        <div class="button">
-            <button class="button1">Buy Now</button>
+        <div class="profile">
+          <img src="Images/profile.png" alt="" />
         </div>
-        <div class="button">
-            <button class="button2">ADD TO CART</button>
+      </div>
+
+      <div class="game">
+        <div class="image-holder">
+          <img src="Images/readdeadredemption.avif" alt="" />
         </div>
-        <div class="background">
-                
+
+        <div class="buy">
+          <div class="now button">Buy Now</div>
+          <div class="add-to-cart button">Add to Cart</div>
+          <div class="about button">About Game</div>
         </div>
-        <div class="logo" onclick="window.location.href = 'index.html ';">
-            
+
+        <div class="game-background"></div>
+      </div>
+
+      <div class="video-reviews">
+        <iframe
+          src="https://www.youtube.com/embed/F63h3v9QV7w?autoplay=1"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+
+        <div class="all-reviews">
+          <div class="reviews">
+            <div class="person">
+              <span>Name</span>
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+
+            <div class="info">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              nisi cupiditate facilis minus aspernatur optio esse eum quae, et
+              alias modi est beatae ullam deleniti magni voluptate autem non
+              provident.
+            </div>
+          </div>
+
+          <div class="reviews">
+            <div class="person">
+              <span>Name</span>
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+
+            <div class="info">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Explicabo, omnis dolorum. Ea voluptate assumenda placeat illum
+              earum praesentium sunt debitis adipisci itaque quisquam dicta
+              iusto, consequatur quaerat nemo quas! Ipsa voluptates quas
+              similique velit perferendis quia natus voluptate voluptatum nisi!
+              At iusto porro blanditiis quas iste unde ab cupiditate autem quia
+              veniam, eos officiis culpa eius cum aliquam adipisci, aut
+              explicabo! Accusamus eaque reiciendis eligendi odio adipisci at
+              qui illo?
+            </div>
+          </div>
+
+          <div class="reviews">
+            <div class="person">
+              <span>Name</span>
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+
+            <div class="info">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              nisi cupiditate facilis minus aspernatur optio esse eum quae, et
+              alias modi est beatae ullam deleniti magni voluptate autem non
+              provident.
+            </div>
+          </div>
+
+          <div class="reviews">
+            <div class="person">
+              <span>Name</span>
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+
+            <div class="info">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+              blanditiis sed perferendis voluptatum dolores soluta excepturi
+              neque! Recusandae ducimus quisquam quae officia dolor hic commodi
+              accusamus sit modi repellat, placeat dignissimos eos suscipit
+              odit? Amet cumque dignissimos repellendus saepe dicta repellat
+              commodi eveniet, sequi, aut iste magni earum? Distinctio in
+              commodi magni explicabo non amet quia rerum quasi inventore neque
+              doloremque sit, aspernatur delectus molestias, adipisci voluptatem
+              animi perspiciatis et omnis, nesciunt quas voluptas obcaecati!
+              Sunt, soluta impedit itaque vero aliquam officiis doloribus
+              ratione cupiditate magnam, dolore quae quidem eveniet asperiores
+              tempora quas consectetur velit fuga nobis, distinctio molestiae
+              veniam reiciendis suscipit quia? Consequuntur inventore vitae a
+              eius iure optio ducimus, nulla, corrupti nobis in ipsa error
+              sapiente molestias nam voluptatem dolores? Quas cum quis
+              laboriosam libero quaerat molestias pariatur! Earum dolores nisi
+              perspiciatis, iste blanditiis ex illum pariatur! Ad libero
+              similique voluptate quo laboriosam maiores quidem eaque cum,
+              accusantium corrupti provident illo dolorem, error fuga, quasi
+              inventore eum temporibus porro eveniet possimus at alias
+              asperiores! Dolore, provident labore. Voluptatem error ullam
+              facilis eveniet, a natus harum nihil modi maiores impedit commodi
+              ipsa rerum excepturi magni voluptates dolores sed nam, esse
+              cupiditate, quo id voluptas atque debitis quas. Sit quis culpa
+              necessitatibus sequi aliquam, fuga fugit distinctio eaque, dicta
+              molestias ad impedit quasi perferendis. Itaque, vero iure, impedit
+              iste quidem ratione accusamus provident hic tenetur ab quasi vitae
+              explicabo, nihil modi delectus voluptas corporis sunt. Nulla
+              eveniet error iusto, corporis ducimus fugiat! Ipsam blanditiis rem
+              illo voluptates itaque consectetur, veritatis non similique totam,
+              voluptatibus distinctio deserunt eveniet perspiciatis modi? Autem,
+              a ratione. Neque doloremque optio sit reprehenderit voluptatem et
+              natus illum minima voluptates fuga sed odit ex fugiat pariatur,
+              nisi tempore quod excepturi enim eum, vel saepe dignissimos.
+              Excepturi assumenda quisquam repellendus ex qui, veniam quibusdam
+              quas saepe eos aliquid!
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="background"></div>
     </div>
-</body>
+  </body>
 </html>

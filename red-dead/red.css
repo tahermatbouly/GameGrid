@@ -3,178 +3,238 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(0, 0, 0);
-  font-family: "Monaco", monospace;
-}
-
-body::-webkit-scrollbar {
-  display: none;
+  font-family: sans-serif;
+  background-color: #000000;
+  color: #fff;
+  scroll-behavior: smooth;
 }
 
 #root {
   display: grid;
-  grid-template-rows: repeat(1fr, 100);
-  grid-template-columns: repeat(1fr, 100);
-  gap: 0px;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(100, 1fr);
+  width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .background {
-  grid-area: 1 / 1 / 101 / 101;
-  background-image: url("Images/wallpaperflare.com_wallpaper\ \(1\).jpg");
+  grid-area: 1 / 1 / 9 / 101;
+  background-image: url("Images/red-dead.png");
   background-size: cover;
+  filter: blur(0px);
   z-index: 0;
-  filter: blur(50px);
 }
 
-.navbar {
+.header {
+  grid-area: 1 / 1 / 2 / 101;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-bottom: 4px solid rgb(0, 0, 0);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent; /* Make the background color transparent */
-  padding: 10px 20px;
-  position: fixed; /* Keep the navbar fixed at the top */
-  width: 100%; /* Make it full width */
-  z-index: 1000; /* Ensure it stays on top of other content */
+  z-index: 2;
 }
 
-.nav-list {
+.header .menu {
+  width: 53vw;
   display: flex;
-  list-style: none;
-  margin-left: 400px;
+  justify-content: space-evenly;
 }
 
-.nav-list li {
-  margin-right: 20px;
-}
-
-.nav-list li:last-child {
-  margin-right: 0;
-}
-
-.nav-list li a {
+.header .menu span {
   text-decoration: none;
-  color: white;
-  font-size: 18px;
-  transition: color 0.3s ease-in-out;
+  transition: text-decoration 0.5s ease-in-out;
 }
 
-.nav-list li a:hover {
-  color: rgb(119, 0, 203); /* Change the color on hover */
+.header .menu span:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: red;
+  text-decoration-thickness: 4px;
+  transition: text-decoration 0.5s ease-in-out;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin-right: 25px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: transparent; /* Darker semi-transparent background */
-  backdrop-filter: blur(8px); /* Slightly less blur for a cleaner look */
-  min-width: 200px;
-  border-radius: 8px; /* Rounded corners */
-  overflow: hidden; /* Prevent overflow */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Softer shadow */
-  z-index: 1;
-  opacity: 0; /* Initial state for animation */
-  transform: translateY(-10px); /* Initial state for animation */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for animation */
-}
-
-.dropdown-content a {
-  display: block; /* Make links block elements */
-  color: #ffffff; /* White text color for visibility */
-  padding: 12px 16px; /* Increased padding for better spacing */
-  text-decoration: none; /* Remove underline */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
-}
-
-.dropdown-content a:hover {
-  color: #ffffff; /* Keep text color white on hover */
-  transform: scale(1.05); /* Slightly scale up on hover */
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-  opacity: 1; /* Fade in */
-  transform: translateY(0); /* Slide down */
-}
-
-.logo {
-  grid-area: 1 / 1 / 15 / 35; /* Adjust the column span to 13 */
-  background-image: url("Images/1618c217a72e62b638c998b57ec2151a.png");
-  background-size: cover;
-  z-index: 1;
-}
-
-.search-bar {
-  position: absolute;
-  top: 50%;
-  left: 85%;
-  transform: translate(-50%, -50%);
-  width: 15%;
-  height: 40px;
-  border-radius: 20px;
+.header .search-bar {
+  width: 30vw;
+  height: 40%;
+  border-radius: 50px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-  padding-left: 20px;
-  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.85);
+  text-align: center;
 }
 
-.red-dead {
-  grid-area: 20 / 10 / 75 / 86;
-  background-image: url("Images/readdeadredemption.avif");
-  background-size: cover;
-  z-index: 1;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
+.header .search-bar::placeholder {
+  text-align: center;
 }
 
-p,
-.description {
-  display: block;
-  grid-area: 25 / 85 / 80 / 100;
-  text-align: left;
-  margin-left: 50px;
-  font-size: 18px;
-  color: white;
-  padding: 0px;
-  z-index: 1;
-  font-family: "Monaco", monospace;
+.header .profile {
+  height: 100%;
+  width: 6%;
+  /* padding: 0.25%; */
 }
 
-.button1 {
-  position: absolute;
-  top: 65%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  width: 15%;
-  height: 40px;
-  border-radius: 10px;
-  border: black;
-  background-color: green;
-  color: white;
-  padding-left: 20px;
-  font-size: 16px;
+.header .profile img {
+  width: 70%;
+  height: 100%;
+  object-fit: contain;
+  /* border-radius: 10px 40px; */
+}
+
+.header .cart {
+  height: 100%;
+  width: 6%;
+}
+
+.header .cart img {
+  width: 70%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.game {
+  grid-area: 2 / 1 / 9 / 34;
+  background-color: rgba(0, 0, 0, 0.75);
+  filter: blur(0px);
+  border-right: 4px solid rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+
   z-index: 1;
 }
 
-.button2 {
-  position: absolute;
-  top: 65%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  width: 15%;
-  height: 40px;
-  border-radius: 10px;
-  border: black;
-  color: black;
-  padding-left: 20px;
-  font-size: 16px;
+.game-background {
+  grid-area: 3 / 3 / 14 / 19;
+  filter: blur(25px);
+  background-color: rgb(255, 174, 0);
+}
+
+.game .image-holder {
+  grid-area: 2 / 4 / 15 / 18;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border: 2px solid rgb(0, 0, 0);
+  z-index: 3;
+}
+
+.game .image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.game .buy {
+  width: 100%;
+  height: 100%;
+  grid-area: 15 / 4 / 21 / 18;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 3;
+}
+
+.game .buy .button {
+  width: 90%;
+  text-align: center;
+  padding: 2%;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.game .buy .now {
+  background-color: rgba(22, 129, 24);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.game .buy .now:hover {
+  background-color: rgba(3, 103, 4);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.game .buy .add-to-cart {
+  background-color: rgb(0, 133, 228);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.game .buy .add-to-cart:hover {
+  background-color: rgb(0, 92, 158);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.game .buy .about {
+  background-color: rgb(232, 159, 1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.game .buy .about:hover {
+  background-color: rgb(164, 112, 0);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.video-reviews {
+  grid-area: 2 / 34 / 9 / 101;
+  /* background-color: rgb(255, 0, 0); */
+  overflow: auto;
+  padding: 2%;
   z-index: 1;
+}
+
+.video-reviews::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 2vw;
+}
+
+.video-reviews::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-reviews iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.video-reviews .all-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.video-reviews .reviews {
+  width: 100%;
+  /* height: 20vh; */
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1%;
+}
+
+.video-reviews .reviews .person {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 1%;
+}
+
+.video-reviews .reviews .info {
+  /* display: flex; */
+  padding: 1%;
+  overflow: auto;
+  /* text-overflow: ellipsis; */
+  max-height: 30vh;
+}
+
+.video-reviews .reviews .info::-webkit-scrollbar {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 1vw;
+}
+
+.video-reviews .reviews .info::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
 }
