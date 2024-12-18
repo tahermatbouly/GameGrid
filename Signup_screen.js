@@ -164,13 +164,7 @@ function checkIfValid() {
   }
 
   if (isValid == true) {
-    alert(`\nFirst Name: ${firstName.value}\n
-Last Name: ${lastName.value}\n
-Email: ${email.value}\n
-Username: ${userName.value}\n
-Phone Number: ${phneNumber.value}\n
-Date Of Birth: ${dateOfBirth.value}\n
-Password: ${password.value} , ${repeatPassword.value}`);
+    window.location.href = "/Home.html";
   }
 }
 

@@ -42,8 +42,7 @@ function checkValid() {
   }
 
   if (isValid == true) {
-    alert(`E-mail: ${eMail.value}\n
-Password: ${passWord.value}`);
+    window.location.href = "/Home.html";
   }
 }
 

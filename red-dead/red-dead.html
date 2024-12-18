@@ -16,7 +16,7 @@
     <div id="root">
       <div class="header">
         <div class="menu">
-          <span>Home</span>
+          <span onclick="switchToWelcomePage()">Home</span>
           <span>Similar Games</span>
           <span>Explore More</span>
           <span>About Creator</span>
@@ -28,7 +28,7 @@
           <img src="Images/cart.png" alt="" />
         </div>
         <div class="profile">
-          <img src="Images/profile.png" alt="" />
+          <img src="Images/profile.png" alt="" onclick="showProfileMenu()"/>
         </div>
       </div>
 
@@ -38,7 +38,7 @@
         </div>
 
         <div class="buy">
-          <div class="now button">Buy Now</div>
+          <div class="now button" onclick="showPurchaseMenu()">Buy Now</div>
           <div class="add-to-cart button">Add to Cart</div>
           <div class="about button">About Game</div>
         </div>
@@ -148,8 +148,82 @@
           </div>
         </div>
       </div>
+      
+      <div class="profile-bar remove">
+
+        <div class="user-info">
+
+          <img src="Images/profile.png" alt="">
+
+          <span>Username</span>
+
+        </div>
+
+        <div class="options">
+
+          <span>Your Profile</span>
+          <span>Friends</span>
+          <span>Games Library</span>
+          <span>Deals & Offers</span>
+          <span>Wishlist</span>
+          <span>Settings</span>
+
+        </div>
+
+        <div class="help">
+          <span>Report a problem</span>
+          <span>FAQs</span>
+        </div>
+      </div>
+
+      <div class="profile-overlay remove" onclick="hideProfileMenu()"></div>
+
+      <div class="purchase">
+        <div class="confirm">
+          <div class="pic">
+            <img src="Images/readdeadredemption.avif" alt="">
+          </div>
+          <div class="checkout">
+            
+            <div class="card-number field">
+              <span>Card Number</span>
+              <input type="number">
+            </div>
+
+            <div class="name field">
+              <span>Cardholder's name</span>
+              <input type="text">
+            </div>
+
+            <div class="expire">
+              <span>Expire Date</span>
+              <input type="text">
+            </div>
+
+            <div class="cvv">
+              <span>CVV</span>
+              <input type="number">
+            </div>
+
+            <div class="checkbox field">
+              <input type="checkbox">
+              <span>Save this card for future payments</span>
+            </div>
+
+            <div class="checkout-button field">
+              <button>Checkout</button>
+            </div>
+
+          </div>
+        </div>
+        <div class="exit" onclick="hidePurchaseMenu()">
+          <span>X</span>
+        </div>
+      </div>
 
       <div class="background"></div>
     </div>
+
+    <script src="red.js"></script>
   </body>
 </html>
