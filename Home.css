@@ -85,11 +85,6 @@ body::-webkit-scrollbar {
   color: rgb(187, 0, 255);
 }
 
-.dropdown {
-  /* position: relative;
-  display: inline-block;
-  margin-right: 25px; */
-}
 
 .dropdown-content {
   display: none;
