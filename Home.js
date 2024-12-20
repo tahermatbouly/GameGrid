@@ -18,6 +18,8 @@ function goToGame(game){
     // }
 
     window.location.href = `${game}/${game}.html`;
+    // window.location.href = `bf3/bf3.html`;
+
 
 }
 

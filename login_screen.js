@@ -42,7 +42,7 @@ function checkValid() {
   }
 
   if (isValid == true) {
-    window.location.href = "/Home.html";
+    window.location.href = "/home.html";
   }
 }
 

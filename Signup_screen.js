@@ -164,12 +164,14 @@ function checkIfValid() {
   }
 
   if (isValid == true) {
-    window.location.href = "/Home.html";
+    window.location.href = "/home.html";
+
   }
 }
 
 function switchToWelcomePage() {
-  window.location.href = "index.html";
+  window.location.href = "/index.html";
+
 }
 
 // let y = 0;
