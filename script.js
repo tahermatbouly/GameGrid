@@ -1,7 +1,7 @@
 "use strict";
 
 function switchToSignupPage() {
-  window.location.href = "Signup_screen.html";
+  window.location.href = "Signup_screen.php";
 }
 
 function switchToLoginPage() {

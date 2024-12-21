@@ -18,7 +18,62 @@
         <!-- <p>Game<span>Grid</span></p> -->
       </div>
       <div class="form">
-        <form action="/" method="" id="form">
+
+        <?php
+
+
+if(isset($_POST["submit"])) {
+    $fname=$_POST["fname"];
+    $lname=$_POST["lname"];
+    $email=$_POST["email"];
+    $password=$_POST["password"];
+    $repeatpassword=$_POST["repeatpassword"];
+    $phone=$_POST["phone"];
+    $dob=$_POST["dob"];
+
+    $errors = array();
+    if (empty($fname) || empty($lname) || empty($email) || empty($password) || empty($repeatpassword)  || empty($dob)) {
+        $errors[] = "All fields are required";
+    }
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Invalid email format";
+    }
+
+    if ($password !== $repeatpassword) {
+        $errors[] = "Passwords do not match";
+    }
+
+    if (strlen($password) < 8) {
+        $errors[] = "Password must be at least 8 characters long";
+    }
+
+    if(count($errors) == 0) {
+        foreach ($errors as $error) {
+            echo $error . "<br>";
+        }
+    }else{
+        require_once "database.php";
+        $sql = "INSERT INTO users (first_name, last_name, email, password, phone, date_of_birth) VALUES ('$fname', '$lname', '$email', '$password', '$phone', '$dob')";
+        $stmt = mysqli_stmt_init($conn);
+        $preparestmt =mysqli_stmt_prepare($stmt, $sql);
+        $result = mysqli_query($conn, $sql);
+        if($preparestmt){
+          mysqli_stmt_bind_param($stmt, "ssssss", $fname, $lname, $email, $password, $phone, $dob);
+          mysqli_stmt_execute($stmt);
+          echo "<div>Registration successful</div>";
+        }
+        else{
+          echo "<div>Registration failed</div>";
+        }
+    }
+
+}
+
+
+?>
+
+        <form action="index.php" method="post" id="form">
           <div class="cont2">
             <div class="cont" id="first-name">
               <label for="firstname">First Name</label>
