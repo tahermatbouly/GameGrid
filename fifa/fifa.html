@@ -23,7 +23,9 @@
           <span>Help</span>
         </div>
 
-        <input class="search-bar" type="text" placeholder="Search" />
+        <form action="/search_games.php" method="get">
+          <input name="query" class="search-bar" type="text" placeholder="Search" />
+        </form>
         <div class="cart">
           <img src="Images/cart.png" alt="" onclick="goToCart()"/>
           <div class="ct"><span>0</span></div>

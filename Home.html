@@ -53,9 +53,9 @@
                         <li><span>Contact</span>
                     </ul>
 
-                    <div class="search-container">
-                        <input type="text" placeholder="Search" class="search-bar">
-                    </div>
+                    <form action="search_games.php" method="GET" class="search-container">
+                        <input name="query" type="text" placeholder="Search" class="search-bar" onkeypress="searchGame()">
+                    </form>
 
                 </div>
                 
@@ -71,7 +71,7 @@
                     <img src="Images/fc25.jpeg" alt="">
                 </div>
                 
-                <div class="red-dead game" onclick="goToGame('red-dead')">
+                <div class="red-dead game" onclick="goToGame('reddead')">
                     <img src="Images/readdeadredemption.avif" alt="">
                 </div>
     

@@ -26,3 +26,16 @@ function goToGame(game){
 
 
 
+
+
+
+
+
+// function searchGame() {
+//     console.log("Search button clicked");
+//     const query = document.getElementById('search-bar').value;
+
+//     if (query.length > 0) {  // Ensure the query is not empty
+//         window.location.href = `search_games.php?query=${query}`;
+//     }
+// }
