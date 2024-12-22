@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="login_screen.css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="10x10" href="Images/1618c217a72e62b638c998b57ec2151a.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="login_screen.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="10x10"
+      href="Images/1618c217a72e62b638c998b57ec2151a.png"
+    />
     <script src="login_screen.js"></script>
     <title>GameGrid</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div id="root">
+      <div class="background"></div>
+      <div class="form">
+        <form action="login.php" method="POST" id="form">
+          <div class="cont" id="e-mail">
+            <label for="email">E-mail</label>
+            <br />
+            <input
+              type="email"
+              class="feild"
+              id="email"
+              name="email"
+              placeholder="example@example.com"
+              required
+            />
+            <div class="error"></div>
+          </div>
 
-     <div id="root">
-        <div class="background">
-          
-        </div>
-        <div class="form">
-            <form action="/" method="" id="form">
-                
-               
-                
-                <div class="cont" id="e-mail">
-                    <label for="email">E-mail</label>
-                <br>
-                <input type="email" class="feild" id="email" name="email" placeholder="example@example.com" required>
-                <div class="error"></div>
-                </div>
-        
-                
-               
-                
-                <div class="cont" id="pass-word">
-                    <label for="password">Password</label>
-                <br>
-                <input type="password" class="feild" id="password" name="password" required>
-                <div class="error"></div>
-                </div>
-        
-                
-                
-        
-                
-            </form>
-            <div class="cont">
-                <button type="submit" class="register" onclick="checkValid()">Log In</button>
-            </div>
-        </div>
+          <div class="cont" id="pass-word">
+            <label for="password">Password</label>
+            <br />
+            <input
+              type="password"
+              class="feild"
+              id="password"
+              name="password"
+              required
+            />
+            <div class="error"></div>
+          </div>
+          <div class="cont">
+            <button type="submit" class="register" onclick="checkValid()">
+              Log In
+            </button>
+          </div>
+        </form>
 
-        
-        <div class="logo" onclick="switchToWelcomePage()">
-            
-        </div>
-        
+        <a class="a" href="Signup_screen.html" >Dont have an account? Sign Up</a>
+
+      </div>
+
+      <div class="logo" onclick="switchToWelcomePage()"></div>
     </div>
-  
-</body>
+  </body>
 </html>
