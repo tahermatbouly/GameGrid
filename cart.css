@@ -47,7 +47,7 @@ html {
     display: flex;
     flex-direction: column;
     gap: 2%;
-    padding: 3%;
+    padding: 5%;
 
     z-index: 1;
     overflow: hidden;
@@ -70,13 +70,50 @@ html {
 
 .main .buy .info{
     height: 72.5%;
-    background-color: brown;
-    
+    background-color: rgba(178, 122, 122, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .buy .info input, .main .buy .info select{
+    height: 20%;
+}
+
+.main .buy .info .payment-method{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    font-weight: bold;
+    /* padding: 3%; */
+    /* justify-content: space-around; */
+}
+
+.main .buy .info .promo-code{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    font-weight: bold;
+    /* padding: 3%; */
+    /* justify-content: space-evenly; */
 }
 
 .main .buy .checkout{
     height: 10%;
     background-color: rgb(143, 37, 37);
+    padding: 0;
+}
+
+.main .buy .checkout button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 120%;
+    background-color: blueviolet;
 }
 
 
