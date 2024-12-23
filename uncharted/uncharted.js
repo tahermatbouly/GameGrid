@@ -1,4 +1,5 @@
 'use strict'
+localStorage.removeItem("game6");
 
 const profileMenu = document.querySelectorAll(".remove");
 profileMenu[0].style.display = "none";
@@ -71,6 +72,29 @@ function addToCart(gameName, pic){
         cartCt.textContent = ct;
         flag = 1;
     }
+
+    let newImage = document.createElement('img');
+    newImage.setAttribute('src', pic);
+    let newImageHolder = document.createElement('div');
+    newImageHolder.setAttribute('class', 'image-holder');
+    newImageHolder.appendChild(newImage);
+
+    let newPrice = document.createElement('div');
+    newPrice.setAttribute('class', 'price');
+    let newspan1 = document.createElement('span');
+    newspan1.textContent = gameName;
+    let newspan2 = document.createElement('span');
+    newspan2.textContent = "Price: 50$";
+    newPrice.appendChild(newspan1);
+    newPrice.appendChild(newspan2);
+
+    let newGame = document.createElement('div');
+    newGame.setAttribute('class', 'game');
+    newGame.appendChild(newImageHolder);
+    newGame.appendChild(newPrice);
+
+    localStorage.setItem("game6", newGame.outerHTML);
+    console.log(localStorage.getItem("game6"));
 
 }
 

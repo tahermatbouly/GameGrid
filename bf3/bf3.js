@@ -1,11 +1,34 @@
-'use strict'
 
-const profileMenu = document.querySelectorAll(".remove");
-profileMenu[0].style.display = "none";
-profileMenu[1].style.display = "none";
 
-const purchaseMenu = document.querySelector(".purchase");
-purchaseMenu.style.display = "none";
+localStorage.removeItem("game1");
+
+
+
+
+function goToCart(){
+    window.location.href = "/cart.html";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const profileMenu = document.querySelectorAll(".remove");
+    profileMenu[0].style.display = "none";
+    profileMenu[1].style.display = "none";
+
+    const purchaseMenu = document.querySelector(".purchase");
+    purchaseMenu.style.display = "none";
+
 
 function showProfileMenu(){
     profileMenu[0].style.display = "grid";
@@ -68,6 +91,33 @@ function addToCart(gameName, pic){
         cartCt.textContent = ct;
         flag = 1;
     }
+    
+    let newImage = document.createElement('img');
+    newImage.setAttribute('src', pic);
+    let newImageHolder = document.createElement('div');
+    newImageHolder.setAttribute('class', 'image-holder');
+    newImageHolder.appendChild(newImage);
+
+    let newPrice = document.createElement('div');
+    newPrice.setAttribute('class', 'price');
+    let newspan1 = document.createElement('span');
+    newspan1.textContent = gameName;
+    let newspan2 = document.createElement('span');
+    newspan2.textContent = "Price: 50$";
+    newPrice.appendChild(newspan1);
+    newPrice.appendChild(newspan2);
+
+    let newGame = document.createElement('div');
+    newGame.setAttribute('class', 'game');
+    newGame.appendChild(newImageHolder);
+    newGame.appendChild(newPrice);
+
+    localStorage.setItem("game1", newGame.outerHTML);
+    console.log(localStorage.getItem("game1"));
+
+    // console.log(newGame);
+    
+    
 
 }
 
@@ -86,6 +136,23 @@ function showInfo(gameName){
 }
 
 
-function goToCart(){
-    window.location.href = "/cart.html";
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// cart logic
+
