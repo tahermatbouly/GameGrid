@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="page" href="D:\Taher\Git-Hub\GameGrid\login_screen.html" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="10x10"
+      href="Images/1618c217a72e62b638c998b57ec2151a.png"
+    />
+    <script src="script.js"></script>
+
+    <title>GameGrid</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="pic-frame">
+        <div class="pic-header">
+          <p>Ready for new <span id="adventures">ADVENTURES</span> ?</p>
+        </div>
+
+        <div class="pic"></div>
+
+        <button class="slide-button-right" onclick="slideRight()">
+          <div>&rarr;</div>
+        </button>
+
+        <button class="slide-button-left" onclick="slideLeft()">
+          <div>&larr;</div>
+        </button>
+      </div>
+      <div class="welcome">
+        <div class="frame-background"></div>
+        <div class="frame">
+          <div class="main-logo">
+            <p class="logo">Game<span id="grid">Grid</span></p>
+          </div>
+
+          <div class="moving-text">
+            <div class="terminal-loader">
+              <div class="text">🎮 Your ultimate gaming destination 🕹️</div>
+            </div>
+          </div>
+
+          <div class="signin-buttons">
+            <button class="signin" onclick="switchToLoginPage()">
+              Sign in
+            </button>
+            <span id="lets-begin"> Lets Begin! </span>
+            <button class="signup" onclick="switchToSignupPage()">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

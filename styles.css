@@ -1,0 +1,282 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: 4fr 6fr;
+  gap: 10px;
+  height: 190vh;
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 0;
+  }
+  35%,
+  85% {
+    width: 25em;
+  } /* adjust width based on content */
+  95%,
+  100% {
+    width: 0;
+  }
+}
+
+.terminal-loader {
+  border: 0.1em solid #333;
+  background-color: #1a1a1a;
+  color: rgb(255, 255, 255);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  padding: 0.5em;
+  width: 27.5em;
+  margin: 25px auto;
+  box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid rgb(119, 0, 203); /* Cursor */
+  animation: typeAndDelete 8s steps(50) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
+}
+
+.welcome {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 100vh;
+}
+
+.pic-frame {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(36, 1fr);
+  height: 90vh;
+  box-shadow: 0px 0px 20px 20px rgb(0, 0, 0);
+}
+
+.pic-header {
+  grid-area: 1 / 1 / 1 / 37;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: rgb(255, 255, 255);
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 5em;
+  justify-items: center;
+  align-content: center;
+  z-index: 2;
+}
+
+.pic-header span {
+  color: rgb(0, 255, 234);
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.slide-button-right {
+  grid-area: 5 / 36 / 7 / 37;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 0;
+  border-radius: 10px 0px 0px 10px;
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.6);
+  z-index: 2;
+}
+
+.slide-button-right:hover {
+  grid-area: 5 / 36 / 7 / 37;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 0;
+  border-radius: 10px 0px 0px 10px;
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.slide-button-left {
+  grid-area: 5 / 1 / 7 / 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 0;
+  border-radius: 0px 10px 10px 0px;
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.6);
+  z-index: 2;
+}
+
+.slide-button-left:hover {
+  grid-area: 5 / 1 / 7 / 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 0;
+  border-radius: 0px 10px 10px 0px;
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.pic {
+  grid-area: 1 / 1 / 11 / 37;
+  background-image: url("Images/pixilated-controllers.webp");
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* .pic.slide{
+  background-position: -100% center;
+  left: -100%;
+} */
+
+.frame-background {
+  background-image: url("Images/wallpaperflare.com_wallpaper\ \(1\).jpg");
+  background-size: cover;
+  filter: blur(50px);
+  grid-area: 1 / 1 / 4 / 25;
+}
+
+.welcome .frame {
+  grid-area: 2 / 7 / 2 / 19;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 5% 0% 5% 0%;
+  border-radius: 20px;
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 50px 25px rgb(0, 0, 0);
+  font-family: "Monaco", monospace;
+  z-index: 1;
+}
+.main-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.main-logo p {
+  flex-shrink: 1; /* Enable shrinking */
+  overflow: hidden; /* Prevent overflow */
+  white-space: nowrap; /* Keep text on one line */
+  text-overflow: ellipsis; /* Add "..." for overflowed text */
+}
+
+.main-logo p {
+  flex-shrink: 1;
+}
+
+.moving-text {
+  display: flex;
+  justify-content: center;
+}
+
+.signin-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.signin-buttons span {
+  flex-shrink: 1; /* Enable shrinking */
+  overflow: hidden; /* Prevent overflow */
+  white-space: nowrap; /* Keep text on one line */
+  text-overflow: ellipsis; /* Add "..." for overflowed text */
+}
+
+.signin-buttons button {
+  flex-shrink: 1; /* Enable shrinking */
+  overflow: hidden; /* Prevent overflow */
+  white-space: nowrap; /* Keep text on one line */
+  text-overflow: ellipsis; /* Add "..." for overflowed text */
+}
+
+.welcome .logo {
+  color: white;
+  font-size: 80pt;
+  font-weight: bold;
+  /* font-family: "Monaco", monospace; */
+  margin: 0px 0px 2% 0px;
+  text-decoration: 5px underline double rgb(119, 0, 203);
+  text-underline-offset: 15px;
+}
+
+.welcome .logo #grid {
+  font-family: "Pixelify Sans", sans-serif;
+  color: rgb(119, 0, 203);
+}
+
+.welcome .message {
+  color: rgb(0, 0, 0);
+  font-size: 13pt;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0% 20% 7.5% 20%;
+  padding: 3pt 3pt 7pt 3pt;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px 4px rgb(255, 255, 255);
+}
+.welcome button {
+  margin: 0pt 4% 0pt 4%;
+  font-size: 15pt;
+  font-weight: bold;
+  padding: 7.5pt;
+  border-radius: 40px;
+  border: 7.5px double black;
+  color: rgb(0, 0, 0);
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.welcome .signup {
+  transition: box-shadow 0.25s ease-in-out;
+}
+
+.welcome .signin {
+  background-color: rgb(119, 0, 203);
+  color: white;
+  transition: box-shadow 0.25s ease-in-out;
+}
+
+.welcome .signup:hover {
+  box-shadow: 0px 0px 25px 2px white;
+}
+
+.welcome .signin:hover {
+  box-shadow: 0px 0px 25px 2px rgb(119, 0, 203);
+}
+
+#lets-begin {
+  color: white;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 25pt;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#linkcolor {
+  color: black;
+}

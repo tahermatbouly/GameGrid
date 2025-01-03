@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Home.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="10x10" href="Images/1618c217a72e62b638c998b57ec2151a.png">
+    <title>GameGrid</title>
+</head>
+<body>
+    <div id="root">
+        
+        
+        
+            <div class="navbar">
+                
+                <div class="navbar-child">
+
+                    <ul class="nav-list">
+
+                        <div class="dropdown">
+                            <li><span>Your Store</span>
+                                <div class="dropdown-content">
+                                    <a href="prefrences">Prefrences</a>
+                                    <a href="recomndations">Recomndations</a>
+                                    <a href="new releases">New Releases</a>
+                                    <a href="popular">Popular</a>
+                                </div>
+                            </li>
+                        </div>
+    
+                        <div class="dropdown">
+                            <li><span>Categories</span>
+                                <div class="dropdown-content">
+                                    <a href="action">Action</a>
+                                    <a href="arcade">Arcade</a>
+                                    <a href="adventure">Adventure</a>
+                                    <a href="racing">Racing</a>
+                                    <a href="shooter">Shooter</a>
+                                    <a href="sports">Sports</a>
+                            </li>
+                        </div>
+    
+                        <div class="dropdown">
+                            <li><span>Special Selections</span>
+                                <div class="dropdown-content">
+                                    <a href="free">Free to play</a>
+                                    <a href="early">Early Access</a>
+                                    <a href="demo">Demos</a>
+                            </li>
+                        </div>
+                        <li><span>News</span>
+                        <li><span>Contact</span>
+                    </ul>
+
+                    <form action="search_games.php" method="GET" class="search-container">
+                        <input name="query" type="text" placeholder="Search" class="search-bar" onkeypress="searchGame()">
+                    </form>
+
+                </div>
+                
+            </div>
+            
+            <div class="hits">
+                <span>Top Hits</span>
+            </div>                   
+            
+            <div class="game-container">
+
+                <div class="fc game" onclick="goToGame('fifa')">
+                    <img src="Images/fc25.jpeg" alt="">
+                </div>
+                
+                <div class="red-dead game" onclick="goToGame('reddead')">
+                    <img src="Images/readdeadredemption.avif" alt="">
+                </div>
+    
+                <div class="gta game" onclick="goToGame('gta')">
+                    <img src="Images/Grand_Theft_Auto_VI.png" alt="">
+                </div>
+                
+                
+            </div>
+            <div class="logo" >
+                <img src="Images/1618c217a72e62b638c998b57ec2151a.png" onclick="switchToWelcomePage()" >
+            </div>
+            <div class="background1"></div>
+
+    </div>
+
+    <div id="divider"></div>
+
+    <div id="root2">
+        <div class="football category">
+            <p>Football Games</p>
+            <div class="scroll-container">
+                <div class="game" onclick="goToGame('fifa')">
+                    <img src="Images/fc25.jpeg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('fifa')">
+                    <img src="Images/fc25.jpeg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('fifa')">
+                    <img src="Images/fc25.jpeg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('fifa')">
+                    <img src="Images/fc25.jpeg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('fifa')">
+                    <img src="Images/fc25.jpeg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('fifa')">
+                    <img src="Images/fc25.jpeg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('fifa')">
+                    <img src="Images/fc25.jpeg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('fifa')">
+                    <img src="Images/fc25.jpeg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('fifa')">
+                    <img src="Images/fc25.jpeg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="fps category">
+            <p>FPS Games</p>
+            <div class="scroll-container">
+                <div class="game" onclick="goToGame('bf3')">
+                    <img src="Images/battlefield3.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('bf3')">
+                    <img src="Images/battlefield3.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('bf3')">
+                    <img src="Images/battlefield3.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('bf3')">
+                    <img src="Images/battlefield3.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('bf3')">
+                    <img src="Images/battlefield3.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('bf3')">
+                    <img src="Images/battlefield3.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('bf3')">
+                    <img src="Images/battlefield3.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('bf3')">
+                    <img src="Images/battlefield3.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('bf3')">
+                    <img src="Images/battlefield3.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="racing category">
+            <p>Racing Games</p>
+            <div class="scroll-container">
+                <div class="game" onclick="goToGame('nfs')">
+                    <img src="Images/nfs.webp" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('nfs')">
+                    <img src="Images/nfs.webp" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('nfs')">
+                    <img src="Images/nfs.webp" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('nfs')">
+                    <img src="Images/nfs.webp" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('nfs')">
+                    <img src="Images/nfs.webp" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('nfs')">
+                    <img src="Images/nfs.webp" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('nfs')">
+                    <img src="Images/nfs.webp" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('nfs')">
+                    <img src="Images/nfs.webp" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('nfs')">
+                    <img src="Images/nfs.webp" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="adventure category">
+            <p>Adventure Games</p>
+            <div class="scroll-container">
+                <div class="game" onclick="goToGame('uncharted')">
+                    <img src="Images/uncharted.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('uncharted')">
+                    <img src="Images/uncharted.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('uncharted')">
+                    <img src="Images/uncharted.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('uncharted')">
+                    <img src="Images/uncharted.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('uncharted')">
+                    <img src="Images/uncharted.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('uncharted')">
+                    <img src="Images/uncharted.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('uncharted')">
+                    <img src="Images/uncharted.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('uncharted')">
+                    <img src="Images/uncharted.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                <div class="game" onclick="goToGame('uncharted')">
+                    <img src="Images/uncharted.jpg" alt="">
+                    <br>
+                    <Span>Game Name</Span>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="background2"></div>
+        
+    </div>
+
+
+
+
+
+
+    <script src="Home.js"></script>
+</body>
+</html>
